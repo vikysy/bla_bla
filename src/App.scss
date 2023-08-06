@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #444444;
+}
+
+a { 
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #fff;
+}
+
+#brand {
+  margin-top: 93px;
+  background-image: url(./assets/imgs/jumbotron.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#about {
+  max-width: 1634px;
+  margin: 0 auto;
+  background-color: #16a086;
+}
+
+#contact {
+  max-width: 1634px;
+  margin: 0 auto;
+  background-color: #ecf0f1;
+}
+
+#footer {
+  max-width: 1634px;
+  margin: 0 auto;
+  background-color: #2d3e50;
+}

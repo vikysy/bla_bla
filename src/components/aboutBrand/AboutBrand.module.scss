@@ -1,0 +1,51 @@
+.brand {
+    padding: 63px 0 80px;
+    color: #fff;
+    text-align: center;
+
+    &__container {
+        max-width: 618px;
+        margin: 0 auto;
+        padding: 0 15px;
+
+        h1 {
+            margin-bottom: 25px;
+            font-size: 55px;
+            font-weight: 300;
+            @media (max-width: 460px) {
+                font-size: 42px;
+            }
+        }
+
+        p {
+            margin-bottom: 50px;
+            font-size: 18px;
+            font-weight: 300;
+            @media (max-width: 460px) { 
+                font-size: 16px;
+            }
+        }
+
+        .arrow_button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 43px auto 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            font-size: 30px;
+            background-color: #fff;
+            a{
+                color: #444444;
+            } 
+        }
+        .arrow_button:hover {
+            background-color: #16a086;
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+}

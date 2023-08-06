@@ -1,0 +1,23 @@
+.contact {
+    padding: 45px 0 60px;
+    
+    &__container {
+        max-width: 971px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 4px;
+        @media (max-width: 970px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+.size {
+    font-size: 14px;
+}

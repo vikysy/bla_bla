@@ -1,0 +1,19 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 968px;
+    margin: 0 auto;
+    padding: 25px 15px;
+    font-size: 14px;
+    color: #fff;
+
+    .footer__text{
+        margin-right: 30px;
+        letter-spacing: 0.015em;
+    }
+
+    i {
+        font-size: 20px;
+    }
+}

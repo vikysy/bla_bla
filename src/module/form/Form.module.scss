@@ -1,0 +1,30 @@
+.form {
+    max-width: 461px;
+    width: 100%;
+    margin: 10px 20px 0 0;
+    @media (max-width: 946px) {
+        margin: 0 0 20px;
+    }
+
+    .required {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 21px;
+        @media (max-width: 461px) {
+            flex-direction: column;
+        }
+    }
+
+    .message { 
+        height: 154px;
+        margin-bottom: 22px;
+        resize: none;
+    }
+
+    .submit {
+        display: block;
+        margin-left: auto;
+        padding: 10px 30px;
+    }
+}
