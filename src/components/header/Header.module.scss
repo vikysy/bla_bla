@@ -45,21 +45,6 @@
         ul {
             display: flex;
             align-items: center;
-
-            li {
-                padding: 10px 13px;
-                &:has(> a:hover) {
-                    background-color: #1bbc9b;
-                }
-
-                a {
-                    font-size: 14px;
-                    color: #444444;
-                    &:hover {
-                        color: #fff;
-                    }
-                }
-            }
         }
     }
 

@@ -1,11 +1,36 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import cl from './MyMap.module.scss';
 import { Map, RoutePanel, YMaps } from '@pbe/react-yandex-maps';
 
 const MyMap: FC = () => {
     const myKey = "0c52a1f9-41c9-4fee-a2fa-a341b7a90949";
-    const address = 'Москва, Колодезный переулок, 2А';
     const coordinatesTo = [55.798682, 37.695816];
+    const [routeOne, setRouteOne] = useState<any>(null);
+    const [routeTwo, setRouteTwo] = useState<any>(null);
+
+    useEffect(() => {
+        if(routeOne) {
+            routeOne.routePanel.state.set({
+                fromEnabled: false,
+                from: 'метро Сокольники Сокольническая линия',
+                toEnabled: false,
+                to: coordinatesTo,
+                type: "pedestrian"
+            })
+        }
+    }, [routeOne])
+
+    useEffect(() => {
+        if(routeTwo) {
+            routeTwo.routePanel.state.set({
+                fromEnabled: false,
+                from: 'метро Преображенская площадь',
+                toEnabled: false,
+                to: coordinatesTo,
+                type: "pedestrian"
+            })
+        }
+    }, [routeTwo])
 
     return (
         <div className={cl.myMap}>
@@ -21,39 +46,15 @@ const MyMap: FC = () => {
                         zoom: 8 
                     }}
                 >
-                    <RoutePanel
-                        instanceRef={ref => {
-                            if(ref) {
-                                ref.routePanel.state.set({
-                                    fromEnabled: false,
-                                    from: 'метро Сокольники Сокольническая линия',
-                                    // from: [55.788996, 37.679880],
-                                    toEnabled: false,
-                                    to: coordinatesTo,
-                                    type: "pedestrian"
-                                })
-                                // ref.routePanel.options.set({
-                                //     reverseGeocoding: false
-                                // })
-                            }
-                        }}
+                    <RoutePanel 
+                        instanceRef={ref => setRouteOne(ref)} 
                         options={{
                             autofocus: false,
                             visible: false
                         }}
                     />
-                    <RoutePanel
-                        instanceRef={ref => {
-                            if(ref) {
-                                ref.routePanel.state.set({
-                                    fromEnabled: false,
-                                    from: 'метро Преображенская площадь',
-                                    toEnabled: false,
-                                    to: coordinatesTo,
-                                    type: "pedestrian"
-                                })
-                            }
-                        }}
+                    <RoutePanel 
+                        instanceRef={ref => setRouteTwo(ref)} 
                         options={{
                             autofocus: false,
                             visible: false

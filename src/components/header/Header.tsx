@@ -1,9 +1,17 @@
 import cl from './Header.module.scss';
 import logo from '../../assets/icons/b-logo.png';
 import { FC, useState } from 'react';
+import NavLink from '../../UI/navLink/NavLink';
 
 const Header: FC = () => {
     const [visible, setVisible] = useState(false);
+
+    const links = [
+        {href: '#brand', text: 'home'},
+        {href: '#portfolio', text: 'portfolio'},
+        {href: '#about', text: 'about'},
+        {href: '#contact', text: 'contact'}
+    ]
 
     function closeMenu() {
         setVisible(false);
@@ -29,18 +37,14 @@ const Header: FC = () => {
                     <div className={visible ? [cl.nav, cl.active].join(' ') : cl.nav} >
                         <nav>
                             <ul>
-                                <li>
-                                    <a href="#brand" onClick={closeMenu}>HOME</a>
-                                </li>
-                                <li>
-                                    <a href="#portfolio" onClick={closeMenu}>PORTFOLIO</a>
-                                </li>
-                                <li>
-                                    <a href="#about" onClick={closeMenu}>ABOUT</a>
-                                </li>
-                                <li>
-                                    <a href="#contact" onClick={closeMenu}>CONTACT</a>
-                                </li>
+                                {links.map( link => (
+                                    <NavLink
+                                        key={link.text}
+                                        href={link.href}
+                                        text={link.text}
+                                        onClick={closeMenu}
+                                    />
+                                ))}
                             </ul>
                         </nav>
                     </div>
@@ -54,7 +58,7 @@ const Header: FC = () => {
                             : <i className="fas fa-bars"></i>
                         }
                     </div>
-                    
+
                 </div>
             </div>
         </header>
