@@ -20,7 +20,7 @@ const Worker: FC<WorkerProps> = ({ employee }) => {
                 <img src={employee._img} alt={employee._fullName} />
                 <div className={cl.socials}>
                     {employee._socials.map((social, index) => (
-                        <a key={index} href={social} target="_blanck" >{iconSocials[index]}</a>
+                        <a key={index} href={social} target="_blanck" rel="nofollow" >{iconSocials[index]}</a>
                     ))}
                 </div>
             </div>

@@ -7,7 +7,7 @@ const AboutBrand: FC = () => {
     const [openModal, setOpenModal] = useState(false);
 
     return (
-        <div id="brand">
+        <div id="brand" className='scroll-top'>
             <div className={cl.brand}>
                 <div className={cl.brand__container}>
                     <h1>We Build <strong>Brand</strong></h1>

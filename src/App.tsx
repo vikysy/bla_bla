@@ -9,14 +9,14 @@ import Portfolio from './components/portfolio/Portfolio';
 function App() {
 
 	return (
-		<>
+		<main className='wrapp'>
 			<Header />
 			<AboutBrand />
 			<Portfolio />
 			<AboutUs />
 			<ContactUs />
 			<Footer />
-		</>
+		</main>
 	)
 }
 

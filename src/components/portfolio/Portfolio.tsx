@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import cl from './Portfolio.module.scss';
 import MyH2 from '../../UI/myH2/MyH2';
 import MySubH2 from '../../UI/mySubH2/MySubH2';
@@ -11,7 +11,7 @@ const Portfolio: FC = () => {
     const [valueSort, setValueSort] = useState('all');
 
     return (
-        <div id='portfolio'>
+        <div id='portfolio' className='scroll-top'>
             <div className={cl.portfolio}>
                 <div className={cl.portfolio__container}>
                     <MyH2 text='Portfolio' />
@@ -47,4 +47,4 @@ const Portfolio: FC = () => {
     )
 };
 
-export default React.memo(Portfolio);
+export default Portfolio;

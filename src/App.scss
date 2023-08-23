@@ -19,6 +19,11 @@ li {
   list-style: none;
 }
 
+.wrapp {
+  max-width: 1634px;
+  margin: 0 auto;
+}
+
 #header {
   position: fixed;
   top: 0;
@@ -33,22 +38,21 @@ li {
   background-image: url(./assets/imgs/jumbotron.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  object-fit: cover;
 }
 
 #about {
-  max-width: 1634px;
-  margin: 0 auto;
   background-color: #16a086;
 }
 
 #contact {
-  max-width: 1634px;
-  margin: 0 auto;
   background-color: #ecf0f1;
 }
 
 #footer {
-  max-width: 1634px;
-  margin: 0 auto;
   background-color: #2d3e50;
+}
+
+.scroll-top {
+  scroll-margin-top: 93px;
 }

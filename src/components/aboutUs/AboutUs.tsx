@@ -7,7 +7,7 @@ import Worker from '../../module/emloyee/Worker';
 
 const AboutUs: FC = () => {
     return (
-        <div id='about'>
+        <div id='about' className='scroll-top'>
             <div className={cl.about}>
                 <div className={cl.about__container}>
                     <MyH2 text='About Us' classes={cl.color}/>

@@ -7,7 +7,7 @@ import MyMap from "../../module/myMap/MyMap";
 
 const ContactUs: FC = () => {
     return (
-        <div id="contact">
+        <div id="contact" className="scroll-top">
             <div className={cl.contact}>
                 <div className={cl.contact__container}>
                     <MyH2 text='Contact Us' />
